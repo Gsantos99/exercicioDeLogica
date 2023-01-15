@@ -86,60 +86,44 @@ const alunos = [
   }
 ]
 
-const alunosRecuperacaoFinal = alunos.filter(obj => {
-  let mediaAluno = calculaMedia(obj.n1, obj.n2, obj.n3, obj.n4)
-  let presencaAluno = calculaPresenca(obj.p)
+const alunosRecuperacaoFinal = []
 
+const alunosPassaramDireto = []
+
+const alunosReprovados = []
+
+alunos.forEach(aluno => {
+  let mediaAluno = calculaMedia(aluno.n1, aluno.n2, aluno.n3, aluno.n4)
+  let presencaAluno = calculaPresenca(aluno.p)
+
+  // Recuperação final
   if (
     (presencaAluno < 80 && mediaAluno >= 7) ||
     (presencaAluno >= 80 && mediaAluno < 7)
   ) {
-    obj.media = mediaAluno
-    obj.presenca = `${presencaAluno}%`
-
-    delete obj.n1
-    delete obj.n2
-    delete obj.n3
-    delete obj.n4
-    delete obj.p
-
-    return obj
+    alunosRecuperacaoFinal.push({
+      nome: aluno.nome,
+      mediaAluno,
+      presencaAluno
+    })
   }
-})
 
-const alunosPassaramDireto = alunos.filter(obj => {
-  let mediaAluno = calculaMedia(obj.n1, obj.n2, obj.n3, obj.n4)
-  let presencaAluno = calculaPresenca(obj.p)
-
+  // Passou direto
   if (presencaAluno >= 80 && mediaAluno >= 7) {
-    obj.media = mediaAluno
-    obj.presenca = `${presencaAluno}%`
-
-    delete obj.n1
-    delete obj.n2
-    delete obj.n3
-    delete obj.n4
-    delete obj.p
-
-    return obj
+    alunosPassaramDireto.push({
+      nome: aluno.nome,
+      mediaAluno,
+      presencaAluno
+    })
   }
-})
 
-const alunosReprovados = alunos.filter(obj => {
-  let mediaAluno = calculaMedia(obj.n1, obj.n2, obj.n3, obj.n4)
-  let presencaAluno = calculaPresenca(obj.p)
-
+  // Reprovaram
   if (presencaAluno < 80 && mediaAluno < 7) {
-    obj.media = mediaAluno
-    obj.presenca = `${presencaAluno}%`
-
-    delete obj.n1
-    delete obj.n2
-    delete obj.n3
-    delete obj.n4
-    delete obj.p
-
-    return obj
+    alunosReprovados.push({
+      nome: aluno.nome,
+      mediaAluno,
+      presencaAluno
+    })
   }
 })
 
