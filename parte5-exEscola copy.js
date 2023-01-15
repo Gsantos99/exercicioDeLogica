@@ -128,16 +128,13 @@ alunos.forEach(aluno => {
 })
 
 function calculaMedia(n1, n2, n3, n4) {
-  let soma = n1 + n2 + n3 + n4
-  let media = soma / 4
-  return media
+  return (n1 + n2 + n3 + n4) / 4
 }
 
 function calculaPresenca(presencaAluno) {
-  const qtdAulas = 240
-  let presenca = presencaAluno
-  let porcentagemPresenca = Math.round((presencaAluno / qtdAulas) * 100)
-  return porcentagemPresenca
+  return Math.round((presencaAluno / 240 * 100))
+
+
 }
 
 console.log('Alunos Aprovados:', alunosPassaramDireto)
