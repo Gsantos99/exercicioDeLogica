@@ -1,4 +1,4 @@
-// Questao 1 - Uso do for in, for of
+// Questao 2 - Uso do for in, for of
 // Imagine que estamos trabalhando em uma tarefa em que precisamos enviar a lista de usuários logados no sistema para o nosso backend
 // Nos ja temos uma funcao nativa no sistema que nos retorna a lista de usuarios logados, a funcao se chama getLoggedUsers.
 // Usando o for in e for of, crie uma funcao que salve somente o valor de email dos usuarios em um novo array
@@ -28,7 +28,7 @@ function filtraEmail(array) {
 filtraEmail(usuarios)
 console.log('Questão 2:', 'Users email', email)
 
-// Questao 2 - Uso de funcoes
+// Questao 3 - Uso de funções
 // Imagine que voce esteja executando uma tarefa onde voce devera mostra um "modal" para o usuario com um titulo, e dois botoes
 // um de confirmar e outro de cancelar. Porem, voce sabe que essa funcao podera ser usada em diversos cenarios e diversas vezes
 // no futuro, entao voce com um otimo desenvolvedor, resolveu criar essa funcao com o seguinte padrao
