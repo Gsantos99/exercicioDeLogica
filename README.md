@@ -1,4 +1,4 @@
-# Exercícios de lógica 
+# Módulo 2: Lógica de programação - Exercícios de lógica 
 
 ![image](https://user-images.githubusercontent.com/94020264/213823919-5d47bbd1-f81a-4a4e-aba1-ef8d42061767.png)
 
@@ -6,7 +6,7 @@
 
 O programa Americanas Futuro Polo Tech surge para formar e desenvolver carreiras em tecnologia nos mais variados polos do Brasil, como Amazonas, Ceará, Espírito Santo, Pernambuco e Santa Catarina.
 
-## Problemas de lógica resolvidos com javaScript 
+## Problemas resolvidos com a linguagem JavaScript 
 
 
 Exercício 1 - Era necessário criar um algoritmo para pegar as informações dos alunos cadastrados no sistema, verificar as notas das provas e a presença em sala de aula. A partir dessas informações e algumas condições estabelecidas pela direção, era necessário informar a média do aluno, sua porcentagem de presença em sala e sua situação no final do ano: aprovado, em recuperação ou reprovado.
